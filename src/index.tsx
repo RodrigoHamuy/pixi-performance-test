@@ -5,8 +5,8 @@ import { PixiTest } from './PixiTest';
 import { ReactPixiTest } from './ReactPixiTest';
 import * as serviceWorker from './serviceWorker';
 
-// runReactTest();
-runPixiTest();
+runReactTest();
+// runPixiTest();
 
 function runReactTest(){
   ReactDOM.render(<ReactPixiTest />, document.getElementById('root'));

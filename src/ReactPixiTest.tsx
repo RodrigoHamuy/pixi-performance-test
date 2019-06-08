@@ -40,7 +40,7 @@ export class ReactPixiTest extends Component<{}, iReactPixiTestState>{
           new Array(this.state.sprites).fill(true).map((v, i) => (
             <AppConsumer key={i}>{ app => (
               <RotatingSprite
-                app={app}
+                // app={app}
                 texture={this.state.texture}
               />
             )}</AppConsumer>
