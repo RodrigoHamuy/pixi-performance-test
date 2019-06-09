@@ -4,10 +4,15 @@ import ReactDOM from 'react-dom';
 import { PixiTest } from './pixi/PixiTest';
 import { ReactPixiTest } from './inlet-react-pixi/ReactPixiTest';
 import * as serviceWorker from './serviceWorker';
+import { ReactPixiFiber } from './react-pixi-fiber/ReactPixiFiberTest';
 
-runReactTest();
+runReactPixiFiberTest();
+// runReactTest();
 // runPixiTest();
 
+function runReactPixiFiberTest() {
+  ReactDOM.render(<ReactPixiFiber />, document.getElementById('root'));
+}
 function runReactTest(){
   ReactDOM.render(<ReactPixiTest />, document.getElementById('root'));
 }
