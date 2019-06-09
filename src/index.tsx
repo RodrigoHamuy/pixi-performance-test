@@ -1,8 +1,8 @@
 import * as dat from 'dat.gui';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { PixiTest } from './PixiTest';
-import { ReactPixiTest } from './ReactPixiTest';
+import { PixiTest } from './pixi/PixiTest';
+import { ReactPixiTest } from './inlet-react-pixi/ReactPixiTest';
 import * as serviceWorker from './serviceWorker';
 
 runReactTest();

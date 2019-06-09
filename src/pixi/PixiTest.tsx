@@ -1,5 +1,5 @@
 import * as pixi from "pixi.js";
-import bunny from './bunny.png';
+import bunny from '../bunny.png';
 
 export class PixiTest {
 
