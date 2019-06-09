@@ -5,9 +5,17 @@ import { Sprite, PixiComponent } from "@inlet/react-pixi";
 interface iMySpriteProps {
   texture: pixi.Texture
 }
-export const MySprite = PixiComponent<iMySpriteProps, pixi.Sprite>('MySprite', {
-  create: () => new pixi.Sprite(),
-  applyProps: (sprite, oldProps, newProps) => {
-    sprite.texture = newProps.texture;
-  }
-})
+interface iPureSprite extends pixi.Sprite{
+  type: 'Sprite',
+  props: iMySpriteProps,
+  key: string | number | null;
+}
+export const MySprite = (root: any, props: iMySpriteProps) => {
+  const sprite =  new pixi.Sprite(props.texture) as any as iPureSprite;
+
+  sprite.type = 'Sprite';
+  sprite.props = props;
+  sprite.key = null;
+
+  return sprite
+}
