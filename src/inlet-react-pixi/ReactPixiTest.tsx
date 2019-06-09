@@ -3,7 +3,6 @@ import dat from 'dat.gui';
 import * as pixi from "pixi.js";
 import React, { Component } from 'react';
 import bunny from '../bunny.png';
-import { RotatingSprite } from "./RotatingSprite";
 import { MySprite } from "./MySprite";
 
 interface iReactPixiTestState {
@@ -42,7 +41,6 @@ export class ReactPixiTest extends Component<{}, iReactPixiTestState>{
       >
         <MySprite texture={this.state.texture} />
         {/* {MySprite({texture: this.state.texture}) } */}
-        {/* {Array(this.state.sprites).fill(true).map(() => { return MySprite({ texture: this.state.texture }) })} */}
       </Stage>
     );
   }
